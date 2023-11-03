@@ -4,10 +4,11 @@
 
 ### Problem Statement
 
-Designated Car Park Finder - With the increasing volume of vehicles and the escalating challenges in finding suitable parking spaces, there exists a pressing need for a designated car park locator system. This project aims to assist drivers in locating designated car parks efficiently, ensuring they have access to available spaces, information on parking specifications, and the capacity to plan their parking ahead of time. The system intends to provide a user-friendly app enabling drivers to easily search and identify designated parking lots nearby, providing details about the available spots, including size, accessibility, and any specific requirements. Additionally, drivers will have the ability to explore designated car parks across the city, facilitating travel planning and integrating these spaces into their journey. Furthermore, the system seeks to allow drivers to reserve or pre-book parking spaces in designated lots, providing convenience and peace of mind before their arrival.
+Designed Car Park Locator - With more cars on the road and parking spaces becoming more scarce, a system to locate designated car parks is much needed. By providing access to available spots, information on parking standards, and the option to plan parking in advance, this effort aims to make it easier for drivers to locate designated parking lots. Drivers will be able to rapidly search for and identify nearby designated parking lots with the use of user-friendly software. Additionally, the app will provide details about the available locations, including their size, accessibility, and any unique requirements. Moreover, vehicles will be able to explore designated parking lots dispersed across the city, simplifying travel arrangements and enabling them to include these locations in their itinerary. The system also attempts to allow vehicles to reserve or pre-book parking places in specified lots, which should provide them comfort and peace of mind before they arrive.
 
 ### Business benefits
 
+Allows Drivers to park their car in designated spots 
 
 ### Options Considered
 
