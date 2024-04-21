@@ -3,21 +3,63 @@
 ## User Needs
 
 ### User stories
-    As a Car Owner (user) in the city, I want to check where I can park my car or see where parking spots are in an area I might be driving by (goal) to help me know where I can park, if a spot is taken, and to help me plan my journey (benefit).
+    As a Car Owner (user) I want to find out where parking is available in the city or in a place I could be driving by (goal) to assist me in planning my trip, letting me know where to park and whether a spot is available (benefit).
     
-    As a Bristol City Council official (user), I want to monitor the utilization rates of designated parking spots (goal) so that I can determine if additional parking facilities are needed and where they should be located (benefit). This data will assist in planning and optimizing urban space management effectively.
+    As a Bristol City Council (user), I would like to keep an eye on how often the allocated parking spaces are used. (goal) so that I can determine whether additional parking spots are needed and where to put them. (benefit). This information will help with efficient planning and optimisation of urban space management.
     
-    As a Business Owner (user) near a parking facility, I want to view patterns of parking spot usage near my business (goal) to better understand customer foot traffic patterns and potentially adjust my operating hours or promotions (benefit).
+    As a Business Owner (user) When there is a parking lot close to my place of business, I would like to see how frequently parking spots are used. (goal) to more fully comprehend consumer foot traffic patterns in order to perhaps modify my business hours or advertising (benefit).
     
-    As a tourist (user) visiting Bristol, I want to find and reserve a parking spot near major attractions (goal) to ensure I can explore the city with ease and without the hassle of searching for parking (benefit).
+    As a tourist (user) I want to find and secure a parking spot near the major attractions when I visit Bristol. (goal) to make sure I can easily and hassle-free around the city without having to look for parking (benefit).
 
 
 ### Actors
     - Car Owners
       Citizens that own a car that wants to be able to find a parking space freely
-    - Council Official
+    - Council 
       In charge of urban space management including additinoal and current parking facilities
     - Business Owner
       Interested in traffic of data for efficiency of the business
     - Tourist
       Tourists that want free parking spots closest to the busiest of places
+
+
+### Use Cases
+| UC1 | Car Owner|
+|--------------------------------------|---------------------|
+| **Description** |  |
+| **Actors** |  |
+| **Assumptions** |  |
+| **Steps** |  |
+| **Variations** |   |
+| **Non-functional** |  |
+| **Issues** |  |
+
+| UC1 | Car Owner|
+|--------------------------------------|---------------------|
+| **Description** |  |
+| **Actors** |  |
+| **Assumptions** |  |
+| **Steps** |  |
+| **Variations** |   |
+| **Non-functional** |  |
+| **Issues** |  |
+
+| UC1 | Car Owner|
+|--------------------------------------|---------------------|
+| **Description** |  |
+| **Actors** |  |
+| **Assumptions** |  |
+| **Steps** |  |
+| **Variations** |   |
+| **Non-functional** |  |
+| **Issues** |  |
+
+| UC1 | Car Owner|
+|--------------------------------------|---------------------|
+| **Description** | |
+| **Actors** |  |
+| **Assumptions** |  |
+| **Steps** |  |
+| **Variations** |   |
+| **Non-functional** |  |
+| **Issues** |  |
