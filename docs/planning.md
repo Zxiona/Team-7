@@ -8,9 +8,12 @@ Designed Car Park Locator - With more cars on the road and parking spaces becomi
 
 ### Business benefits
 
-Allows Drivers to park their car in designated spots 
+Implementing a dedicated parking finder programme has several benefits for businesses, such as improved resource utilisation and parking efficiency. In addition to reducing the amount of time spent searching for places and relieving traffic congestion, the software assists drivers in finding and booking designated parking spaces quickly. It also ensures that particular parking allocations, such as employee or disabled parking, are used efficiently. Additionally, the software expedites travel and reduces anxiety associated with locating a spot in a crowded area by allowing users to discover and reserve parking spots in advance.
 
 ### Options Considered
+
+
+### Expected Risks
 
 
 ## Project Scope
