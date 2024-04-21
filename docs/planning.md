@@ -12,9 +12,10 @@ Implementing a dedicated parking finder programme has several benefits for busin
 
 ### Options Considered
 
+Already apps on the appstore that specialise in this. An example of this could be JustPark Parking app.
 
 ### Expected Risks
-
+There are dangers associated with developing a parking app. For example, accurate real-time data on parking availability is necessary, and inaccurate data could annoy users. Reliance on a system raises the risk of mistakes or failures, which could make traffic worse. Moreover, increased app usage can cause fewer parking spots to become accessible on an as-needed basis, highlighting the importance of a robust system architecture and effective management for effective operation.
 
 ## Project Scope
 
