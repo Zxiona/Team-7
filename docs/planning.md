@@ -18,6 +18,20 @@ Already apps on the appstore that specialise in this. An example of this could b
 There are dangers associated with developing a parking app. For example, accurate real-time data on parking availability is necessary, and inaccurate data could annoy users. Reliance on a system raises the risk of mistakes or failures, which could make traffic worse. Moreover, increased app usage can cause fewer parking spots to become accessible on an as-needed basis, highlighting the importance of a robust system architecture and effective management for effective operation.
 
 ## Project Scope
+- Actor: Car Owner - Drivers who are seeking designated parking spots within Bristol.
+
+- Open Data Bristol Platform - Features a map of designated parking spots.
+
+- Open Gov. License - Data provided by Bristol City Council under this license.
+
+- App will be developed using HTML/JavaScript technology.
+  
+- Bristol Council - May be involved in the management or expansion of parking facilities.
+  
+- Mobile App - Enables users to view all designated parking spots in the city and potentially filter by specific requirements such as size, accessibility, or type of vehicle.
+
+- Ensure that the data used is publicly licensed.
+
 
 ![image](https://github.com/Zxiona/Team-1/assets/82226228/a6802c02-cc30-4426-9a0b-29de4d9a422e)
 
