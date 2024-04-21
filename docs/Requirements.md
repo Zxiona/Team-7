@@ -7,9 +7,9 @@
     
     As a Bristol City Council (user), I would like to keep an eye on how often the allocated parking spaces are used. (goal) so that I can determine whether additional parking spots are needed and where to put them. (benefit). This information will help with efficient planning and optimisation of urban space management.
     
-    As a Business Owner (user) When there is a parking lot close to my place of business, I would like to see how frequently parking spots are used. (goal) to more fully comprehend consumer foot traffic patterns in order to perhaps modify my business hours or advertising (benefit).
+    As a Business Owner (user) When there is a parking lot close to my place of business, I would like to see how frequently parking spots are used. (goal) So i can track the public within my area and plan advertising and company hours efficiently (benefit).
     
-    As a tourist (user) I want to find and secure a parking spot near the major attractions when I visit Bristol. (goal) to make sure I can easily and hassle-free around the city without having to look for parking (benefit).
+    As a tourist (user) I want to find a parking spot near where i want to go. (goal) so that i know where to park without the hassle as I am unfamiliar with the area (benefit).
 
 
 ### Actors
