@@ -26,9 +26,9 @@
 ### Use Cases
 | UC1 | Car Owner|
 |--------------------------------------|---------------------|
-| **Description** |  Find parking spots that are close and/or reserve a parking spot in advance wihtin a parking facility |
+| **Description** |  Find parking spots that are close and/or reserve a parking spot in advance |
 | **Actors** | Car Owners |
-| **Assumptions** | Drivers must enable location services and adhere to app guidelines for reporting parking status. |
+| **Assumptions** | Drivers must have location services turned on and follow the rules stated by the app for example reporting parking in a space. |
 | **Steps** | Populate a database with designated parking spot data from Bristol's open data. Drivers check near their current location or specify a destination to view available parking spots. |
 | **Variations** | Drivers may use the app to view parking availability city-wide to plan their routes. |
 | **Non-functional** | Data must be protected and secure, accessible in real-time, and the app must function across various devices, adhering to the Data Protection Act with a user-friendly interface. |
