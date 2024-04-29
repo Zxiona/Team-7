@@ -19,6 +19,8 @@ Tourists who accept the app's terms of service and enable location services will
 Business owners can use the way the app monitors parking frequency within specific parking places to enhance sales. This is done by assessing the data collected on a visual dashboard within the app and connecting adverts and company hours to improve efficiency.
 
 # Sequence Diagram for Use Case 1
+####Car owner
+Description: 
 
 ![Insert your Interaction/Sequence Diagrams for each use-case here.](diagrams/UCSD11.png)
 
