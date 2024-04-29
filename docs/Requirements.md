@@ -68,7 +68,8 @@
 
 ![image](https://github.com/Zxiona/Team-7/assets/82226228/8776dc1a-60c3-41c2-8d21-ec70196e2b5d)        ![image](https://github.com/Zxiona/Team-7/assets/82226228/b6c3d51d-bddf-40aa-b692-009853a8614a)
 
-
+## Software Requirements Specification
+### Functional requirements 
 
 
 
