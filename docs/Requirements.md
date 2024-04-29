@@ -109,6 +109,32 @@ FR4: The system shall display also the reported issues of the parking spots
 FR5: The system won't be able to show data regarding models of cars frequanted or data that may impede on customer privacy
 
 
+### Non-Functional Requirements
+### Usability: 
+
+NFR1: The system shall show up to 6 different parking spots near the user.
+
+NFR2: The system shall parking spots up to 1 mile from the user.
+
+NFR3: The system should have a graphical user interface that has the map as the main focus, this allows for the user to have a better experience.
+
+
+### Portability and Reliability:
+
+NFR4: The system must work on both IOS and Android software  
+
+NFR5: The system must be able to be portable over all screen sizes and resolutions, through laptops to smartphones.
+
+### Availability: 
+
+NFR6: The system should be able to be used at all times even allowing the user to use the app offline.
+
+### Quality: 
+
+NFR7: The system should be made to be able to handle continuous testing and updates without harming the use of the app.
+
+NFR8: The system should load rapidly and perform at a high level. A resource intensive program will harm user experiance resulting in major backlash.
+
 
 
 
