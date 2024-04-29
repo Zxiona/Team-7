@@ -22,19 +22,32 @@ Business owners can use the way the app monitors parking frequency within specif
 
 #### Car owner
 
-Description: 
+Description: The designated car park finder app allows the car owner to select a tabular output. The selected tabular output would then be sent to the EV app client. The app would then request the driver to grant permission to access the user location. When the location is accessed, the user would request for the nearest EV charging point locations. The app would then diplay the results on the table/map.
 
 ![Insert your Interaction/Sequence Diagrams for each use-case here.](diagrams/UCSD11.png)
 
 # Sequence Diagram for Use Case 2
 
+#### Bristol City Council
+
+Description: The designated car park finder app allows the Council to select a tabular output. The selected tabular output would then be sent to the EV app client. The app would then request the driver to grant permission to access the user location. When the location is accessed, the user would request for the data usage of the car parks. The app would then diplay the results on the dashboard.
+
+
 ![Insert your Interaction/Sequence Diagrams for each use-case here.](diagrams/UCSD22.png)
 
 # Sequence Diagram for Use Case 3
 
+#### Tourists
+
+Description: The designated car park finder app allows the car owner to select a tabular output. The selected tabular output would then be sent to the EV app client. The app would then request the driver to grant permission to access the user location. When the location is accessed, the user would request for the car parks within a selected area. The app would then diplay the results on the table/map.
+
 ![Insert your Interaction/Sequence Diagrams for each use-case here.](diagrams/UCSD33.png)
 
 # Sequence Diagram for Use Case 4
+
+#### Business Owners
+
+Description: The designated car park finder app allows the Council to select a tabular output. The selected tabular output would then be sent to the EV app client. The app would then request the driver to grant permission to access the user location. When the location is accessed, the user would request for the data usage of the car parks within a selected area. The app would then diplay the results on the dashboard.
 
 ![Insert your Interaction/Sequence Diagrams for each use-case here.](diagrams/UCSD44.png)
 
