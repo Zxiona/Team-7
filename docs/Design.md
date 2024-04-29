@@ -21,6 +21,7 @@
 
 ## User Interface design
 
+![image](https://github.com/Zxiona/Team-7/assets/82226228/a9bd37a2-0079-4812-b148-0bc08931f459)
 
 
 
