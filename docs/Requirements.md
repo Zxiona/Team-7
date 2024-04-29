@@ -32,31 +32,31 @@
 | **Steps** | Using Bristol opendata create a database with all of the data related to the parking spots. Car owners should then check around them for parking spots. Car owners are then able to see the parking spots and all the details they entail. |
 | **Variations** | Car owners may want to look up parking spots pre-trip so that they are able to plan the most efficient route for them. |
 | **Non-functional** | Data must be protected and secure. Should be able to access data from server in real time. Needs to be able to run on any devices within reason. Must have a user-friendly interface that is easy to understand. Must abide by Data Protection Act and UK Gov. |
-| **Issues** | Challenges in updating the app in real-time when parking spots become occupied or free. |
+| **Issues** | There could be issues with the real-time data being updated onto the app when car parking spaces are being occupied. |
 
 | UC2 | Bristol City Council|
 |--------------------------------------|---------------------|
-| **Description** | Analyze the usage of designated parking spots to determine if additional parking infrastructure is necessary. |
+| **Description** | Assess the use of different parking spots and buildings to see whether there is a need for more or less in a certain area. |
 | **Actors** | Bristol City Council |
-| **Assumptions** | There is a need for continuous monitoring and planning for parking facilities. |
-| **Steps** | Use the database to track usage rates of parking spots and identify areas with insufficient parking. |
-| **Variations** |  The council may receive feedback or requests through the app for new parking facilities.  |
-| **Non-functional** | Secure data management, robust server capacity, and compliance with governmental regulations. The interface should be designed for ease of use by city planners. |
-| **Issues** | Potential public dissatisfaction with changes or expansions in parking infrastructure affecting existing vehicular or pedestrian flows. |
+| **Assumptions** | Must be a need for constant monitoring of parking sites.|
+| **Steps** | Using Bristol opendata create a database with all of the data related to the parking spots. will monitor the usage of the parking sites and relay it back for the council to see. |
+| **Variations** |  Users of the app may put in feedback/requests for the council to see.  |
+| **Non-functional** | Data must be protected and secure. Should be able to access data from server in real time. Needs to be able to run on any devices within reason. Must have a user-friendly interface that is easy to understand. Must abide by Data Protection Act and UK Gov. |
+| **Issues** | The council may make the wrong decision based on the data from the app which can possibly create more congestion issues rather than stop them. |
 
 | UC3 | Tourist|
 |--------------------------------------|---------------------|
-| **Description** | Find and reserve parking spots near major attractions or throughout the city to facilitate easy exploration. |
+| **Description** | Find parking spots near popular tourism spots for higher efficiency. |
 | **Actors** | Tourists |
-| **Assumptions** | Tourists require quick and easy access to parking information to enhance their visit experience. |
-| **Steps** | Tourists use the app to locate and possibly reserve parking close to key tourist spots or along a planned travel route. |
-| **Variations** |  Tourists may filter parking spots by type (e.g., short-term, long-term, secure) based on their specific needs. |
-| **Non-functional** | The app must provide real-time data, be intuitive for users unfamiliar with the area, secure, and function reliably on mobile devices. |
-| **Issues** |  Accuracy in real-time availability and potential language barriers in the app’s usability for non-local tourists. |
+| **Assumptions** | Tourists will need to find/book best parking spots for there destination (walking distance etc.) |
+| **Steps** |Using Bristol opendata create a database with all of the data related to the parking spots. Tourists should then around them or the tourism spot for parking. Tourists are then able to see the parking spots and are able to book spots |
+| **Variations** |  Tourists should be able to filter out parking spots they dont want (long/short term stay, handicapped etc.). They should also be able to pre-book parking spaces. |
+| **Non-functional** | Data must be protected and secure. Should be able to access data from server in real time. Needs to be able to run on any devices within reason. Must have a user-friendly interface that is easy to understand. Must abide by Data Protection Act and UK Gov. |
+| **Issues** |  Tourists could have a difficult time understanding local parking regulations through the app as they may be from a foriegn area. |
 
 | UC4 | Business Owner|
 |--------------------------------------|---------------------|
-| **Description** | Access data on parking usage near their business to tailor services or promotions based on the flow of customers. |
+| **Description** | Assess the use of different parking spots so that they are able to plan advertising and company hours efficiently  |
 | **Actors** | Business owners |
 | **Assumptions** | Business owners need reliable data to make informed decisions about their operations. |
 | **Steps** | Business owners use the app to analyze parking spot utilization near their establishments to gauge customer traffic patterns. |
