@@ -28,10 +28,10 @@
 |--------------------------------------|---------------------|
 | **Description** |  Find parking spots that are close and/or reserve a parking spot in advance |
 | **Actors** | Car Owners |
-| **Assumptions** | Drivers must have location services turned on and follow the rules stated by the app for example reporting parking in a space. |
-| **Steps** | Populate a database with designated parking spot data from Bristol's open data. Drivers check near their current location or specify a destination to view available parking spots. |
-| **Variations** | Drivers may use the app to view parking availability city-wide to plan their routes. |
-| **Non-functional** | Data must be protected and secure, accessible in real-time, and the app must function across various devices, adhering to the Data Protection Act with a user-friendly interface. |
+| **Assumptions** | Car owners must have location services turned on and follow the rules stated by the app for example reporting parking in a space. |
+| **Steps** | Using Bristol opendata create a database with all of the data related to the parking spots. Car owners should then check around them for parking spots. Car owners are then able to see the parking spots and all the details they entail. |
+| **Variations** | Car owners may want to look up parking spots pre-trip so that they are able to plan the most efficient route for them. |
+| **Non-functional** | Data must be protected and secure. Should be able to access data from server in real time. Needs to be able to run on any devices within reason. Must have a user-friendly interface that is easy to understand. Must abide by Data Protection Act and UK Gov. |
 | **Issues** | Challenges in updating the app in real-time when parking spots become occupied or free. |
 
 | UC2 | Bristol City Council|
