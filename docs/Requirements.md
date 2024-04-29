@@ -63,3 +63,13 @@
 | **Variations** | May also use feedback mechanisms within the app to adjust their business strategies or interact with customers about parking availability. |
 | **Non-functional** | Data must be displayed in a user-friendly easy to understand interface. Must be able to safeguard customer data correctly. The app must be able to run with high network traffic. |
 | **Issues** | The data may be not 100% accurate or read incorrectly meaning the business may make a poor decision. |
+
+
+
+![image](https://github.com/Zxiona/Team-7/assets/82226228/8776dc1a-60c3-41c2-8d21-ec70196e2b5d)
+
+
+
+
+
+
