@@ -20,19 +20,19 @@ Business owners can use the way the app monitors parking frequency within specif
 
 # Sequence Diagram for Use Case 1
 
-
+![Insert your Interaction/Sequence Diagrams for each use-case here.](diagrams/UCSD1.png)
 
 # Sequence Diagram for Use Case 2
 
-
+![Insert your Interaction/Sequence Diagrams for each use-case here.](diagrams/UCSD2.png)
 
 # Sequence Diagram for Use Case 3
 
-
+![Insert your Interaction/Sequence Diagrams for each use-case here.](diagrams/UCSD3.png)
 
 # Sequence Diagram for Use Case 4
 
-
+![Insert your Interaction/Sequence Diagrams for each use-case here.](diagrams/UCSD4.png)
 
 ## User Interface design
 
