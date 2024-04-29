@@ -56,10 +56,10 @@
 
 | UC4 | Business Owner|
 |--------------------------------------|---------------------|
-| **Description** | Assess the use of different parking spots so that they are able to plan advertising and company hours efficiently  |
+| **Description** | Assess the use of different parking spots so that they are able to plan advertising and company hours efficiently.  |
 | **Actors** | Business owners |
-| **Assumptions** | Business owners need reliable data to make informed decisions about their operations. |
-| **Steps** | Business owners use the app to analyze parking spot utilization near their establishments to gauge customer traffic patterns. |
+| **Assumptions** | To make the best decisions, the owners will want to have accurate data. |
+| **Steps** | Using Bristol opendata create a database with all of the data related to the parking spots. Business owners will then analyse the data to further their business. |
 | **Variations** | May also use feedback mechanisms within the app to adjust their business strategies or interact with customers about parking availability. |
-| **Non-functional** | Data must be presented in an understandable format, ensuring confidentiality where necessary, and the system must be capable of handling high traffic without downtime. |
-| **Issues** | Potential issues with data accuracy which could lead to misguided business decisions. |
+| **Non-functional** | Data must be displayed in a user-friendly easy to understand interface. Must be able to safeguard customer data correctly. The app must be able to run with high network traffic. |
+| **Issues** | The data may be not 100% accurate or read incorrectly meaning the business may make a poor decision. |
