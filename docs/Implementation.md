@@ -12,5 +12,5 @@ tree-cli tree:
 
 ## Software Architecture
 
-###TODO: Component diagram
+### TODO: Component diagram
 
