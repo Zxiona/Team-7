@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function query() {
+      let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/5/query?where=1%3D1&outFields=NAME,AREA_NAME,OPERATOR,OPERATING_TIMES,TYPE_DESCRIPTION,CCTV,EASTINGS,NORTHINGS,OCCUPANCY,OCCUPANCYCURRENT&outSR=4326&f=json"
+      fetch(url,{ method: "GET", headers: { Accept: "application/json"}})
+      .then(res=>res.json())
+      .then(console.log);
+    }
+</script>
+</head>
+<body>
+  <header>
+    <div class="inner-width">
+      <h1>Designated Car Park Finder</h1>
+      <div class="menu-icon">
+        <i class="fas fa-align-right"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="navigation-menu">
+    <nav>
+      <li><a href="DCP.htm">About Us</a></li>
+      <li><a href="data usage.htm">Data Dashboard</a></li>
+      <li><a href="mapcp.htm">Map</a></li>
+      <li><a href="tablecp.htm">Car Park List</a></li>
+      <li><a href="sign in.htm">Sign In</a></li>
+    </nav>
+  </div>
+
+  <div class="header">
+    <h2>About Us</h2>
+  </div>
+
+  <div class="paragraph">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maxime quo mollitia sint suscipit ducimus cumque animi. Nobis asperiores soluta, modi itaque error officia assumenda, explicabo dolores sed vel quo!</p>
+  </div>
+
+  <script>
+    $(".menu-icon").click(function(){
+      $(this).toggleClass("active");
+      $(".navigation-menu").toggleClass("active");
+      $(".menu-icon i").toggleClass("fa-times");
+    });
+  </script>
+</body>
+</html>
