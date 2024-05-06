@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
   <title></title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,13 +15,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="style.css">
   <script>
+    window.onload = function() {
+      query();
+    };
+
     function query() {
-      let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/5/query?where=1%3D1&outFields=NAME,AREA_NAME,OPERATOR,OPERATING_TIMES,TYPE_DESCRIPTION,CCTV,EASTINGS,NORTHINGS,OCCUPANCY,OCCUPANCYCURRENT&outSR=4326&f=json"
-      fetch(url,{ method: "GET", headers: { Accept: "application/json"}})
-      .then(res=>res.json())
-      .then(console.log);
+      let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/5/query?where=1%3D1&outFields=NAME,AREA_NAME,OPERATOR,OPERATING_TIMES,TYPE_DESCRIPTION,CCTV,EASTINGS,NORTHINGS,OCCUPANCY,OCCUPANCYCURRENT&outSR=4326&f=json";
+      fetch(url, { method: "GET", headers: { Accept: "application/json" } })
+        .then(res => res.json())
+        .then(addMarkers);
     }
-</script>
+
+  </script>
+
+    <script> const MY_TOKEN = "pk.eyJ1Ijoienhpb25hIiwiYSI6ImNsdnVleHl5ODFnNTcybHJyYjJsZDU5NjkifQ.HeXvYeoC5E3Pik99lTgxYQ"; </script>
+
+    <style>
+        #map { position: relative; left: 100px; top: 1; height: 80%; width: 90%; }
+    </style>
+
+    <script src="script.js" defer></script>
+
 </head>
 <body>
   <header>
@@ -44,11 +61,85 @@
     <h2>Car Park Map</h2>
   </div>
 
-  <div class="paragraph">
+    <div class="inner-width3">
+      <div class="center-icon">
+        <div class="location">
+          <button onclick="getLocation('DesignatedCarParkFinder')">
+            <i class="fa fa-location-arrow"></i>
+          </button>
+        </div>
+      </div>
+    </div>
 
+  <div id="map">
   </div>
 
+  <!-- <script>
+    mapboxgl.accessToken = MY_TOKEN;
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        center: [-2.587910, 51.454514], // longitude, latitude
+        zoom: 14 // zoom level
+    });
+  </script> -->
 
+  <script>
+
+      function getLocation(page) {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function(position) {
+              // permission granted
+              location.href = `${page}?lat=${position.coords.latitude}&lon=${position.coords.longitude}`;
+            },
+            function() {
+              // permission denied
+              // location defaults to central Bristol
+              location.href = `${page}?lat=51.454514&lon=-2.587910`;
+            }
+          );
+        } else {
+          // unsupported feature
+          alert("Geolocation is not supported by this browser.");
+          // location defaults to central Bristol
+          location.href = `${page}?lat=51.454514&lon=-2.587910`;
+        }
+      }
+
+    // get query string parameters lat, lon
+    var urlParams = new URLSearchParams(location.search);
+    var lat = urlParams.get('lat');
+    var lon = urlParams.get('lon');
+
+    mapboxgl.accessToken = MY_TOKEN;
+      var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        center: [lon,lat], // longitude, latitude
+        zoom: 12 // zoom level
+      });
+
+    // Create marker and add it to the map.
+    var marker = new mapboxgl.Marker().setLngLat([lon, lat]).addTo(map);
+
+    query();
+
+    function addMarkers(json) {
+      let features = json.features;
+      for (i = 0; i < features.length; i++) {
+        let a = features[i].attributes;
+        let g = features[i].geometry;
+
+        // Create marker and add it to the map.
+        let marker = new mapboxgl.Marker().setLngLat([g.x, g.y]).addTo(map);
+
+        // create the popup
+        let popup = new mapboxgl.Popup({ offset: 25 }).setText(a.NAME);
+            marker.setPopup(popup);
+      }
+    }
+  </script>
+
+  
 
   <script>
     $(".menu-icon").click(function(){

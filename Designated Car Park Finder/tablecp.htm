@@ -25,6 +25,7 @@
 
     function outputTable(json) {
       let element = document.getElementById("results");
+      element.innerHTML = "";
       let features = json.features;
       for (let i = 0; i < features.length; i++) {
         let a = features[i].attributes;
@@ -69,6 +70,14 @@
         tr.appendChild(td);
         element.appendChild(tr);
       }
+
+      function search(string) {
+        let urlEncoded = encodeURIComponent(string);
+        url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/5/query?where=1%3D1&text=${urlEncoded}&objectIds=&time=&timeRelation=esriTimeRelationOverlaps&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=&returnExtentOnly=false&sqlFormat=none&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&featureEncoding=esriDefault&f=pjson`;
+        fetch(url, { method: 'GET', headers: { 'Accept': 'application/json' }})
+        .then (response => response.json())
+        .then(outputTable);
+      }
     }
   </script>
 </head>
@@ -95,7 +104,22 @@
   <div class="wrapper">
     <table  id="dataTable">
       <caption>
-        <h2>List of Car Parks</h2>
+        <div class="inner-width2">
+
+          <h2>List of Car Parks</h2>
+
+          <div class="searchbar">
+            <div class="filter-icon">
+              <i class="fa fa-search" style="font-size:18px"></i>
+            </div>
+            <form class="search" action="tablecp.htm">
+              <div class="term">
+                <input name="searchterm" placeholder="search..." type="text">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
       </caption>
       <thead>
         <th>Name</th>
@@ -117,46 +141,27 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script>
+    // get query string with searchterm
+    var urlParams = new URLSearchParams(location.search);
+    var searchterm = urlParams.get('searchterm');
+    search(searchterm);
+  </script>
+
+  <script>
     $(".menu-icon").click(function() {
       $(this).toggleClass("active");
       $(".navigation-menu").toggleClass("active");
       $(".menu-icon i").toggleClass("fa-times");
     });
   </script>
+
+  <script>
+    $(".filter-icon").click(function() {
+      $(this).toggleClass("active");
+      $(".term").toggleClass("active");
+      $(".filter-icon i").toggleClass("fa-times");
+    });
+  </script>
+
 </body>
 </html>
-
-
-
-
-   <!-- <table>
-        <caption>
-          <h2>List of Car Parks</h2>
-        </caption>
-
-        <tr>
-          <th>Name</th>
-          <th>Area Name</th>
-          <th>Operator</th>
-          <th>Operating Times</th>
-          <th>Type Description</th>
-          <th>CCTV</th>
-          <th>Eastings</th>
-          <th>Northings</th>
-          <th>Occupancy</th>
-          <th>Occupancy Current</th>
-        </tr>
-
-        <tr>
-          <td data-cell="Name"> </td>
-          <td data-cell="Area Name"> </td>
-          <td data-cell="Operator"> </td>
-          <td data-cell="Operating Times"> </td>
-          <td data-cell="Type Description"> </td>
-          <td data-cell="CCTV"> </td>
-          <td data-cell="Eastings"> </td>
-          <td data-cell="Northings"> </td>
-          <td data-cell="Occupancy"> </td>
-          <td data-cell="Occupancy Current"> </td>
-        </tr>
-    </table> -->

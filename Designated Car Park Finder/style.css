@@ -75,6 +75,26 @@ small{
   color: var(--color-dark);
 }
 
+.inner-width2{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  margin: auto;
+  color: var(--color-dark);
+}
+
+.inner-width3{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  margin: auto;
+  color: var(--color-dark);
+}
+
 .menu-icon{
   width: 50px;
   height: 50px;
@@ -92,6 +112,48 @@ small{
 .menu-icon:hover{
   opacity: .9;
   transform: scale(1.1);
+}
+
+.filter-icon{
+  width: 45px;
+  height: 45px;
+  background: #2c3a47;
+  color: #fff;
+  text-align: center;
+  line-height: 47px;
+  font-size: 20px;
+  z-index: -2;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .2s linear;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.filter-icon:hover{
+  opacity: .9;
+  transform: scale(1.1);
+}
+
+.searchbar{
+  position: relative;
+}
+
+.term{
+  padding-right: 0.75rem;
+  right: 800px;
+  opacity: 0;
+}
+
+.term.active{
+  opacity: 1;
+}
+
+.filter-icon.active{
+  background: #f1f1f1;
+  color: #2c3a47;
 }
 
 .navigation-menu{
@@ -151,15 +213,6 @@ small{
   text-align: center;
   border-radius: 25px;
   color: var(--color-info-dark);
-}
-
-.map{
-  margin: auto;
-  font-size: 18px;
-  line-height: 1.4em;
-  text-align: center;
-  justify-content: center;
-  display: flex;
 }
 
 .wrapper{
@@ -259,12 +312,34 @@ td::before{
   td:first-child{
     padding-top: 2rem;
   }
-  
+
   td:last-child{
     padding-bottom: 2rem;
   }
 
+  #map { position: absolute; left: 130px; top: 1; height: 80%; width: 60%; }
+
 }
+
+/* .center-icon{
+  width: 45px;
+  height: 45px;
+  background: #2c3a47;
+  color: #fff;
+  text-align: center;
+  line-height: 47px;
+  font-size: 20px;
+  z-index: 2;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+
+.center-icon:hover{
+  opacity: .9;
+  transform: scale(1.1);
+} */
 
 .header{
   padding-top: 50px;
