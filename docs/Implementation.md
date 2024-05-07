@@ -59,5 +59,5 @@ tree-cli tree:
 
 ## Software Architecture
 
-![Insert your Interaction/Component Diagrams for each use-case here.](diagrams/Component Diagram.png)
+![Insert your Interaction/Component Diagrams for each use-case here.](diagrams/ComponentDiagram.png)
 
