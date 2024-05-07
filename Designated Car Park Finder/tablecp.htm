@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic HTML document setup with character set and viewport for responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
+  <!-- Including jQuery library from CDN for DOM manipulation and AJAX requests -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Including Google Fonts for Material Symbols and Poppins font family -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Including Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Link to external CSS file for styling -->
   <link rel="stylesheet" href="style.css">
   <script>
+    // Function to run when the window has finished loading
     window.onload = function() {
       query();
     };
 
+    // Function to fetch car park data from a specified URL and process JSON response
     function query() {
       let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/5/query?where=1%3D1&outFields=NAME,AREA_NAME,OPERATOR,OPERATING_TIMES,TYPE_DESCRIPTION,CCTV,EASTINGS,NORTHINGS,OCCUPANCY,OCCUPANCYCURRENT&outSR=4326&f=json";
       fetch(url, { method: "GET", headers: { Accept: "application/json" } })
@@ -23,6 +28,7 @@
         .then(json => outputTable(json));
     }
 
+    // Function to dynamically create a table from fetched JSON data
     function outputTable(json) {
       let element = document.getElementById("results");
       element.innerHTML = "";
@@ -71,6 +77,7 @@
         element.appendChild(tr);
       }
 
+      // Function to handle search requests
       function search(string) {
         let urlEncoded = encodeURIComponent(string);
         url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/5/query?where=1%3D1&text=${urlEncoded}&objectIds=&time=&timeRelation=esriTimeRelationOverlaps&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=&returnExtentOnly=false&sqlFormat=none&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&featureEncoding=esriDefault&f=pjson`;
@@ -85,6 +92,7 @@
   <header>
     <div class="inner-width">
       <h1>Designated Car Park Finder</h1>
+      <!-- Menu icon for mobile navigation toggle -->
       <div class="menu-icon">
         <i class="fas fa-align-right"></i>
       </div>
@@ -92,8 +100,9 @@
   </header>
 
   <div class="navigation-menu">
+    <!-- Navigation links for site pages -->
     <nav>
-      <li><a href="DCP.htm">About Us</a></li>
+      <li><a href="DCP.htm">List by Distance</a></li>
       <li><a href="data usage.htm">Data Dashboard</a></li>
       <li><a href="mapcp.htm">Map</a></li>
       <li><a href="tablecp.htm">Car Park List</a></li>
@@ -102,12 +111,14 @@
   </div>
 
   <div class="wrapper">
+    <!-- Table for displaying car park data -->
     <table  id="dataTable">
       <caption>
         <div class="inner-width2">
 
           <h2>List of Car Parks</h2>
 
+          <!-- Search bar for filtering car parks -->
           <div class="searchbar">
             <div class="filter-icon">
               <i class="fa fa-search" style="font-size:18px"></i>
@@ -122,6 +133,7 @@
         </div>
       </caption>
       <thead>
+        <!-- Column headers for car park data -->
         <th>Name</th>
         <th>Area Name</th>
         <th>Operator</th>
@@ -134,9 +146,12 @@
         <th>Occupancy Current</th>
       </thead>
       <tbody id="results">
+        <!-- Filled dynamically with car park data -->
       </tbody>
     </table>
   </div>
+
+  <!-- Additional scripts for handling interactions -->
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -148,6 +163,7 @@
   </script>
 
   <script>
+    // Toggles navigation menu visibility on mobile
     $(".menu-icon").click(function() {
       $(this).toggleClass("active");
       $(".navigation-menu").toggleClass("active");
@@ -156,6 +172,7 @@
   </script>
 
   <script>
+    // Toggles search bar visibility
     $(".filter-icon").click(function() {
       $(this).toggleClass("active");
       $(".term").toggleClass("active");

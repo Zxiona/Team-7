@@ -92,7 +92,6 @@ small{
   justify-content: center;
   padding: 14px 20px;
   margin: auto;
-  color: var(--color-dark);
 }
 
 .menu-icon{
@@ -103,10 +102,14 @@ small{
   text-align: center;
   line-height: 50px;
   font-size: 20px;
-  z-index: 2;
+  z-index: 4;
   border-radius: 10px;
   cursor: pointer;
   transition: .2s linear;
+  -webkit-transition: .2s linear;
+  -moz-transition: .2s linear;
+  -ms-transition: .2s linear;
+  -o-transition: .2s linear;
 }
 
 .menu-icon:hover{
@@ -122,7 +125,7 @@ small{
   text-align: center;
   line-height: 47px;
   font-size: 20px;
-  z-index: -2;
+  z-index: 1;
   border-radius: 10px;
   cursor: pointer;
   transition: .2s linear;
@@ -167,6 +170,7 @@ small{
   align-items: center;
   justify-content: center;
   transition: .6s;
+  z-index: 2;
 }
 
 .navigation-menu nav{
@@ -321,15 +325,15 @@ td::before{
 
 }
 
-/* .center-icon{
+.center-icon{
   width: 45px;
   height: 45px;
-  background: #2c3a47;
+  background: var(--color-dark);
   color: #fff;
   text-align: center;
   line-height: 47px;
   font-size: 20px;
-  z-index: 2;
+  z-index: 1;
   border-radius: 10px;
   cursor: pointer;
   transition: .2s linear;
@@ -339,7 +343,7 @@ td::before{
 .center-icon:hover{
   opacity: .9;
   transform: scale(1.1);
-} */
+}
 
 .header{
   padding-top: 50px;

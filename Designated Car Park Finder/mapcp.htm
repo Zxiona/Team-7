@@ -2,54 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Viewport settings to control layout on different devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title></title>
+  <!-- Mapbox CSS for map styling -->
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
+  <!-- Mapbox JavaScript API for interactive maps -->
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+  <!-- jQuery for DOM manipulation and event handling -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Google fonts for typography -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <!-- Link to external CSS file for custom styles -->
   <link rel="stylesheet" href="style.css">
   <script>
+    // When the window loads, execute the query function to fetch data
     window.onload = function() {
       query();
     };
 
+    // Fetch data from a REST API endpoint and process JSON response
     function query() {
       let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/5/query?where=1%3D1&outFields=NAME,AREA_NAME,OPERATOR,OPERATING_TIMES,TYPE_DESCRIPTION,CCTV,EASTINGS,NORTHINGS,OCCUPANCY,OCCUPANCYCURRENT&outSR=4326&f=json";
       fetch(url, { method: "GET", headers: { Accept: "application/json" } })
         .then(res => res.json())
         .then(addMarkers);
     }
-
   </script>
 
+    <!-- Map Token -->
     <script> const MY_TOKEN = "pk.eyJ1Ijoienhpb25hIiwiYSI6ImNsdnVleHl5ODFnNTcybHJyYjJsZDU5NjkifQ.HeXvYeoC5E3Pik99lTgxYQ"; </script>
 
+    <!-- Inline style for map container positioning and sizing -->
     <style>
         #map { position: relative; left: 100px; top: 1; height: 80%; width: 90%; }
     </style>
-
+    
+    <!-- Defer loading external script until HTML is parsed -->
     <script src="script.js" defer></script>
 
 </head>
 <body>
   <header>
     <div class="inner-width">
+
       <h1>Designated Car Park Finder</h1>
+
+      <!-- Menu icon for triggering dynamic navigation menu -->
       <div class="menu-icon">
         <i class="fas fa-align-right"></i>
       </div>
+
     </div>
   </header>
 
   <div class="navigation-menu">
+    <!-- Navigation links -->
     <nav>
-      <li><a href="DCP.htm">About Us</a></li>
+      <li><a href="DCP.htm">List by Distance</a></li>
       <li><a href="data usage.htm">Data Dashboard</a></li>
       <li><a href="mapcp.htm">Map</a></li>
       <li><a href="tablecp.htm">Car Park List</a></li>
@@ -64,7 +79,8 @@
     <div class="inner-width3">
       <div class="center-icon">
         <div class="location">
-          <button onclick="getLocation('DesignatedCarParkFinder')">
+          <!-- Button to get current location using geolocation API -->
+          <button onclick="getLocation('mapcp.htm')">
             <i class="fa fa-location-arrow"></i>
           </button>
         </div>
@@ -72,6 +88,7 @@
     </div>
 
   <div id="map">
+    <!-- Container for Mapbox map -->
   </div>
 
   <!-- <script>
@@ -85,6 +102,7 @@
 
   <script>
 
+    // Function to fetch and use the user's location or default if declined/not available
       function getLocation(page) {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(
@@ -139,14 +157,16 @@
     }
   </script>
 
-  
+
 
   <script>
+    // Toggle class 'active' for menu icon and navigation menu on click
     $(".menu-icon").click(function(){
       $(this).toggleClass("active");
       $(".navigation-menu").toggleClass("active");
       $(".menu-icon i").toggleClass("fa-times");
     });
   </script>
+
 </body>
 </html>
