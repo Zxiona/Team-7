@@ -22,6 +22,7 @@ tree-cli tree:
         └── Design.md
         └── 📁diagrams
             └── temp
+            └── ComponentDiagram.png
             └── UCSD1.png
             └── UCSD11.png
             └── UCSD2.png
