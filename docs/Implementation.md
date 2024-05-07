@@ -59,5 +59,7 @@ tree-cli tree:
 
 ## Software Architecture
 
+This Diagram shows how the app communicates with two different services, in this case it would be mapbox.gl .
+
 ![Insert your Interaction/Component Diagrams for each use-case here.](diagrams/ComponentDiagram.png)
 
