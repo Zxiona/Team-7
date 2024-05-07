@@ -8,6 +8,53 @@ Version V0.1 of the designated car park finder app using 51 rows of data from th
 ## Project Structure
 
 tree-cli tree:
+```
+└── 📁Team-7
+    └── 📁Designated Car Park Finder
+        └── data usage.htm
+        └── DCP.htm
+        └── mapcp.htm
+        └── sign in.css
+        └── sign in.htm
+        └── style.css
+        └── tablecp.htm
+    └── 📁docs
+        └── Design.md
+        └── 📁diagrams
+            └── temp
+            └── UCSD1.png
+            └── UCSD11.png
+            └── UCSD2.png
+            └── UCSD22.png
+            └── UCSD3.png
+            └── UCSD33.png
+            └── UCSD4.png
+            └── UCSD44.png
+        └── 📁HTML prototype
+            └── data usage.htm
+            └── DCP.htm
+            └── mapcp.htm
+            └── sign in.css
+            └── sign in.htm
+            └── style.css
+            └── tablecp.htm
+        └── 📁images
+            └── component.png
+            └── context.png
+            └── deleteme.html
+            └── deployment.png
+            └── screenshot.png
+            └── sequence.png
+            └── use-case.png
+            └── wireframe.png
+        └── Implementation.md
+        └── planning.md
+        └── Requirements.md
+        └── Testing.md
+    └── README.md
+    └── 📁temp
+        └── diagrams
+```
 
 
 ## Software Architecture
