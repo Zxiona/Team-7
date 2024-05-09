@@ -57,7 +57,9 @@ This image shows a wireframe for the designated parking spot app. It demonstrate
 
 ![image](https://github.com/Zxiona/Team-7/assets/82226228/a9bd37a2-0079-4812-b148-0bc08931f459)
 
+This is the final iteration of the wireframe
 
+![Insert your Wireframe.](images/wireframefinal.png)
 
 
 
