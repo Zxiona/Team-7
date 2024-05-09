@@ -49,7 +49,7 @@
 | **Description** | Find parking spots near popular tourism spots for higher efficiency. |
 | **Actors** | Tourists |
 | **Assumptions** | Tourists will need to find/book best parking spots for there destination (walking distance etc.) |
-| **Steps** |Using Bristol opendata create a database with all of the data related to the parking spots. Tourists should then around them or the tourism spot for parking. Tourists are then able to see the parking spots and are able to book spots |
+| **Steps** |Using Bristol opendata create a database with all of the data related to the parking spots. Tourists should then look around for a spot to park around thier relevent tourism spot. Tourists are then able to see the parking spots and are able to book spots |
 | **Variations** |  Tourists should be able to filter out parking spots they dont want (long/short term stay, handicapped etc.). They should also be able to pre-book parking spaces. |
 | **Non-functional** | Data must be protected and secure. Should be able to access data from server in real time. Needs to be able to run on any devices within reason. Must have a user-friendly interface that is easy to understand. Must abide by Data Protection Act and UK Gov. |
 | **Issues** |  Tourists could have a difficult time understanding local parking regulations through the app as they may be from a foriegn area. |
