@@ -10,19 +10,29 @@ Version V0.1 of the designated car park finder app using 51 rows of data from th
 tree-cli tree:
 ```
 └── 📁Team-7
+    └── 📁.github
+        └── 📁workflows
+            └── npm-grunt.yml
     └── 📁Designated Car Park Finder
+        └── .eslintrc.js
         └── data usage.htm
         └── DCP.htm
         └── mapcp.htm
+        └── Review.htm
+        └── script.js
         └── sign in.css
         └── sign in.htm
         └── style.css
         └── tablecp.htm
+        └── test.html
     └── 📁docs
+        └── Deployment.md
         └── Design.md
         └── 📁diagrams
-            └── temp
+            └── ClassDiagram.png
             └── ComponentDiagram.png
+            └── DeploymentDiagram.png
+            └── temp
             └── UCSD1.png
             └── UCSD11.png
             └── UCSD2.png
