@@ -58,6 +58,7 @@ tree-cli tree:
             └── sequence.png
             └── use-case.png
             └── wireframe.png
+            └── wireframefinal.png
         └── Implementation.md
         └── planning.md
         └── Requirements.md
@@ -66,6 +67,7 @@ tree-cli tree:
     └── 📁temp
         └── diagrams
 ```
+
 PS C:\Users\Nathan\Documents\GitHub\Team-7> npm install -g eslint
 node:internal/modules/cjs/loader:1148
   throw err;
