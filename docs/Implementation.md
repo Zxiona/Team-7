@@ -56,6 +56,19 @@ tree-cli tree:
     └── 📁temp
         └── diagrams
 ```
+PS C:\Users\Nathan\Documents\GitHub\Team-7> npm install -g eslint
+node:internal/modules/cjs/loader:1148
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\Users\Nathan\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
 
 
 ## Software Architecture
