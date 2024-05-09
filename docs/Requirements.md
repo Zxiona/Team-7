@@ -121,7 +121,7 @@ NFR3: The system should have a graphical user interface that has the map as the 
 
 ### Portability and Reliability:
 
-NFR4: The system must work on both IOS and Android software  
+NFR4: The system must work on IOS, Android and all Browser software  
 
 NFR5: The system must be able to be portable over all screen sizes and resolutions, through laptops to smartphones.
 
