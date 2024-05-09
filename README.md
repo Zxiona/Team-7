@@ -10,3 +10,10 @@
 6. [Deployment](docs/Deployment.md)
 
 
+Credit:
+
+Requirements:
+
+    - All use cases, diagrams, requirements were created by Nathan Huynh
+
+    - Everthing was done by Nathan Huynh
