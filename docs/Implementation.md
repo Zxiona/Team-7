@@ -78,3 +78,5 @@ This Diagram shows how the app communicates with two different services, in this
 
 ![Insert your Interaction/Component Diagrams for each use-case here.](diagrams/ComponentDiagram.png)
 
+![Insert your Interaction/Class Diagrams for each use-case here.](diagrams/ClassDiagram.png)
+
