@@ -223,6 +223,28 @@ p{
   border-color: #c0392b;
 }
 
+.box input[type = "review"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: left;
+  border: 2px solid #bdc3c7;
+  padding: 14px 10px;
+  width: 500px;
+  height: 280px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.box input[type = "review"]:focus{
+  width: 500px;
+  height: 500px;
+  border-color: #c0392b;
+}
+
 .box input[type = "submit"]{
   border:0;
   background: none;

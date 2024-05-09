@@ -1,0 +1,103 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test Suite</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.20.1.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.20.1.js"></script>
+
+  <div class="wrapper">
+    <!-- Table for displaying car park data -->
+    <table  id="dataTable">
+      <thead>
+        <!-- Column headers for car park data -->
+        <th>Name</th>
+        <th>Area Name</th>
+        <th>Operator</th>
+        <th>Times</th>
+        <th>Type</th>
+        <th>CCTV</th>
+        <th>Eastings</th>
+        <th>Northings</th>
+        <th>Occupancy</th>
+        <th>Occupancy Current</th>
+      </thead>
+      <tbody id="results">
+        <!-- Filled dynamically with car park data -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    QUnit.module('script', function(hooks) {
+
+      hooks.before( function() {
+        outputTable({ features: [ {
+            attributes:{ NAME: "test-name",
+            AREA_NAME: "test-area_name",
+            OPERATOR: "test-operator",
+            OPERATING_TIMES: "test-operating_times",
+            TYPE_DESCRIPTION: "test-type",
+            CCTV: "test-cctv",
+            EASTINGS: "test-eastings",
+            NORTHINGS: "test-northings",
+            OCCUPANCY: "test-occupancy",
+            OCCUPANCY_CURRENT: "test-occupancy_current"},
+          geometry:{} }
+        ]});
+      });
+
+      QUnit.test('outputTable attributes', function(assert) {
+        let element = document.getElementById("results");
+        let row = element.children.item(0);
+        assert.equal(row.children.item(0).innerHTML, "test-name");
+        assert.equal(row.children.item(1).innerHTML, "test-area_name");
+        assert.equal(row.children.item(2).innerHTML, "test-operator");
+        assert.equal(row.children.item(3).innerHTML, "test-operating_times");
+        assert.equal(row.children.item(4).innerHTML, "test-type");
+        assert.equal(row.children.item(5).innerHTML, "test-cctv");
+        assert.equal(row.children.item(6).innerHTML, "test-eastings");
+        assert.equal(row.children.item(7).innerHTML, "test-northings");
+        assert.equal(row.children.item(8).innerHTML, "test-occupancy");
+        assert.equal(row.children.item(9).innerHTML, "test-occupancy_current");
+      });
+
+      QUnit.test('outputTable length', function(assert) {
+        let element = document.getElementById("results");
+        assert.equal(element.children.length, 1);
+      });
+
+      QUnit.test('Map token defined', function(assert) {
+        assert.ok(MY_TOKEN);
+      });
+
+      QUnit.test('getLocation no nav.geolocation', function(assert) {
+        let page = "TEST";
+        let win = { alert:()=>{}, location:{} };
+        let nav = { geolocation:null };
+        getLocation(page,win,nav);
+        assert.equal(win.location.href,`${page}?lat=51.454514&lon=-2.587910`)
+      });
+
+      QUnit.test('getLocation with nav.geolocation denied', function(assert) {
+        let page = "TEST";
+        let win = { alert:()=>{}, location:{} };
+        let nav = { geolocation:{ getCurrentPosition:(grant,deny)=>{ deny() }}};
+        getLocation(page,win,nav);
+        assert.equal(win.location.href,`${page}?lat=51.454514&lon=-2.587910`)
+      });
+
+      QUnit.test('getLocation with nav.geolocation granted', function(assert) {
+        let page = "TEST";
+        let win = { alert:()=>{}, location:{} };
+        let nav = { geolocation:{ getCurrentPosition:(grant,deny)=>{ grant( { coords:{ latitude:1, longitude:2 }} ) }}};
+        getLocation(page,win,nav);
+        assert.equal(win.location.href,`${page}?lat=1&lon=2`)
+      });
+    });
+  </script>
+</body>
+</html>
