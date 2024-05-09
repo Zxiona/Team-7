@@ -9,6 +9,19 @@
   
 - Astah UML - Astah is a UML modelling tool that allows users to be able to create diagrams for software
 
+## User guide
+
+# Use Case 1
+
+Find parking spots that are close.
+
+Using Bristol opendata create a database with all of the data related to the parking spots.
+
+1. Once on the app click on the menu icon in the top right
+
+![image](https://github.com/Zxiona/Team-7/assets/82226228/e28c799a-dab2-4f91-b9ca-9fd8d1a8002e)
+
+
 ## Deployment Diagram
 
 ![Insert your Interaction/Deployment Diagrams for each use-case here.](diagrams/DeploymentDiagram.png)
