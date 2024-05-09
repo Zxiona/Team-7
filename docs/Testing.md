@@ -4,7 +4,7 @@
 
 | Test case ID | Test Type | Description | Scenario |
 |--------------------------------------|---------------------|---------------------|---------------------|
-| **TF1.1.1** | UAT | request location permission from user then query geolocation from mapbox  | 1. User clicks Location arrow  2. Confirmation box appears, requesting permission. 3. gets shows location on map  |
+| **TF1.1.1** | UAT | request location permission from user then query geolocation from mapbox  | 1. User clicks Location arrow  2. Confirmation box appears, requesting permission  3. gets shows location on map  |
 | **TF1.1.2** | UAT |  |  |
 | **TF1.1.4** | UAT |  |  |
 | **TF1.7** | UAT |  |  |
