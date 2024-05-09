@@ -13,9 +13,10 @@
 | **TF3.6** | UAT | Map centers on user location | 1. User clicks Location arrow <br> 2. Confirmation box appears, requesting permission <br> 3. Centers map to user location |
 | **TNF1** | UAT | The app should only show up to 6 markers when centered on user location  | 1. User clicks Location arrow <br> 2. Confirmation box appears, requesting permission <br> 3. Shows 6 markers only near user  |
 | **TNF2** | UAT | The app should only show parking spots 1km from user in table | 1. User clicks location arrow <br> 2. Confirmation box appears, requesting permission <br> 3. Shows closest parking spots within 1km in table |
-| **TNF4** | UAT | The app should work on IOS, Android and all browser software |  |
-| **TNF5** | UAT |  |  |
-| **TNF8** | UAT |  |  |
+| **TNF4** | UAT | The app should work on IOS, Android and all browser software | perform all tests on IOS, Android and a different browsers (eg. chrome, safari, opera) |
+| **TNF5** | UAT | The app should be able to be portable over all screen sizes and resolutions, through laptops to smartphones.  | perform all tests on multiple different divices |
+| **TNF8a** | UAT | the app should respond to user within 4 seconds | 1. User centers location 2. Map centers within 4 seconds |
+| **TNF8b** | UAT | the app should respond to user within 4 seconds | 1. User navigates to table page 2. webpage with table appears within 4 seconds |
 
 
 
