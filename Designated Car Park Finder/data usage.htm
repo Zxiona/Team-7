@@ -23,63 +23,40 @@
   <script>
     // Function to run when the window has finished loading
     window.onload = function() {
-      query();
-      query(onepiece);
+      query(osgb); // Calls the query function with an undefined 'osgb' variable, likely intended to be defined elsewhere or passed dynamically
     };
 
-    // Function to fetch car park data from a specified URL and process JSON response
-    function query() {
-      let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/5/query?where=1%3D1&outFields=NAME,AREA_NAME,OPERATOR,OPERATING_TIMES,TYPE_DESCRIPTION,CCTV,EASTINGS,NORTHINGS,OCCUPANCY,OCCUPANCYCURRENT&outSR=4326&f=json";
+    // Function to fetch data from a specific URL and then display it using outputTable function
+    function query(osgb) {
+      let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/5/query?where=&text=&objectIds=&time=&timeRelation=esriTimeRelationOverlaps&geometry=359002%2C+172474&geometryType=esriGeometryPoint&inSR=&spatialRel=esriSpatialRelIntersects&distance=1&units=esriSRUnit_Kilometer&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=&returnExtentOnly=false&sqlFormat=none&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&featureEncoding=esriDefault&f=pjson";
       fetch(url, { method: "GET", headers: { Accept: "application/json" } })
         .then(res => res.json())
-        .then(json => outputTable(json));
+        .then(json => outputTable(json, osgb));
     }
 
-    // Function to dynamically create a table from fetched JSON data
-    function outputTable(json) {
+    // Function to dynamically create and populate a table with data fetched from the server
+    function outputTable(json, osgb) {
       let element = document.getElementById("results");
-      element.innerHTML = "";
+      element.innerHTML = ""; // Clear existing table content
       let features = json.features;
       for (let i = 0; i < features.length; i++) {
         let a = features[i].attributes;
+        let g = features[i].geometry;
         let tr = document.createElement("tr");
-        let td = document.createElement("td");
-        td.innerHTML = a.NAME;
-        tr.appendChild(td);
-        td = document.createElement('td');
-        td.innerHTML = a.AREA_NAME;
-        tr.appendChild(td);
-        element.appendChild(tr);
-        td = document.createElement('td');
-        td.innerHTML = a.OPERATOR;
-        tr.appendChild(td);
-        element.appendChild(tr);
-        td = document.createElement('td');
-        td.innerHTML = a.OPERATING_TIMES;
-        tr.appendChild(td);
-        element.appendChild(tr);
-        td = document.createElement('td');
-        td.innerHTML = a.TYPE_DESCRIPTION;
-        tr.appendChild(td);
-        element.appendChild(tr);
-        td = document.createElement('td');
-        td.innerHTML = a.CCTV;
-        tr.appendChild(td);
-        element.appendChild(tr);
-        td = document.createElement('td');
-        td.innerHTML = a.EASTINGS;
-        tr.appendChild(td);
-        element.appendChild(tr);
-        td = document.createElement('td');
-        td.innerHTML = a.NORTHINGS;
-        tr.appendChild(td);
-        element.appendChild(tr);
-        td = document.createElement('td');
-        td.innerHTML = a.OCCUPANCY;
-        tr.appendChild(td);
-        element.appendChild(tr);
-        td = document.createElement('td');
-        td.innerHTML = a.OCCUPANCY_CURRENT;
+        // For each attribute of interest, create a table cell and append it to the row
+        ['NAME', 'AREA_NAME', 'OPERATOR', 'OPERATING_TIMES', 'TYPE_DESCRIPTION', 'CCTV', 'EASTINGS', 'NORTHINGS', 'OCCUPANCY', 'OCCUPANCY_CURRENT'].forEach(field => {
+          let td = document.createElement('td');
+          td.innerHTML = a[field];
+          tr.appendChild(td);
+        });
+        // Calculate distance if geometry and osgb are provided, and append as the last cell
+        let td = document.createElement('td');
+        if (g && osgb) {
+          let d = Math.round(Math.sqrt((g.x - osgb.eastings) ** 2 + (g.y - osgb.northings) ** 2));
+          td.innerHTML = `${d} metres`;
+        } else {
+          td.innerHTML = 'N/A'; // In case geometry or osgb is not available
+        }
         tr.appendChild(td);
         element.appendChild(tr);
       }
@@ -167,6 +144,7 @@
         <th>Northings</th>
         <th>Occupancy</th>
         <th>Occupancy Current</th>
+        <th>Distance</th>
       </thead>
       <tbody id="results">
         <!-- Filled dynamically with car park data -->

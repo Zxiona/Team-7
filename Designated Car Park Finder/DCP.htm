@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic HTML document setup with character set and viewport for responsive design -->
   <meta charset="UTF-8">
+  <!-- Viewport settings to control layout on different devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <!-- Including jQuery library from CDN for DOM manipulation and AJAX requests -->
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <!-- Mapbox CSS for map styling -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
+  <!-- Mapbox JavaScript API for interactive maps -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+  <!-- jQuery for DOM manipulation and event handling -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- Including Google Fonts for Material Symbols and Poppins font family -->
+  <!-- Google fonts for typography -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Including Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- Link to external CSS file for styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <!-- Link to external CSS file for custom styles -->
   <link rel="stylesheet" href="style.css">
   <script>
     // Function to be called when the window loads
@@ -92,6 +98,12 @@
       <caption>
         <div class="inner-width2">
           <h2>List of Car Parks</h2>
+          <div class="location">
+            <!-- Button to get current location using geolocation API -->
+            <button onclick="getLocation('DCP.htm')">
+              <i class="fa fa-location-arrow"></i>
+            </button>
+          </div>
           <div class="searchbar">
             <div class="filter-icon">
               <i class="fa fa-search" style="font-size:18px"></i>
@@ -131,6 +143,60 @@
     var urlParams = new URLSearchParams(location.search);
     var searchterm = urlParams.get('searchterm');
     search(searchterm);
+
+        // Function to fetch and use the user's location or default if declined/not available
+        function getLocation(page) {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function(position) {
+              // permission granted
+              location.href = `${page}?lat=${position.coords.latitude}&lon=${position.coords.longitude}`;
+            },
+            function() {
+              // permission denied
+              // location defaults to central Bristol
+              location.href = `${page}?lat=51.454514&lon=-2.587910`;
+            }
+          );
+        } else {
+          // unsupported feature
+          alert("Geolocation is not supported by this browser.");
+          // location defaults to central Bristol
+          location.href = `${page}?lat=51.454514&lon=-2.587910`;
+        }
+      }
+
+    // get query string parameters lat, lon
+    var urlParams = new URLSearchParams(location.search);
+    var lat = urlParams.get('lat');
+    var lon = urlParams.get('lon');
+
+    mapboxgl.accessToken = MY_TOKEN;
+      var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        center: [lon,lat], // longitude, latitude
+        zoom: 12 // zoom level
+      });
+
+    // Create marker and add it to the map.
+    var marker = new mapboxgl.Marker().setLngLat([lon, lat]).addTo(map);
+
+    query(osgb);
+
+    function addMarkers(json) {
+      let features = json.features;
+      for (i = 0; i < features.length; i++) {
+        let a = features[i].attributes;
+        let g = features[i].geometry;
+
+        // Create marker and add it to the map.
+        let marker = new mapboxgl.Marker().setLngLat([g.x, g.y]).addTo(map);
+
+        // create the popup
+        let popup = new mapboxgl.Popup({ offset: 25 }).setText(a.NAME);
+            marker.setPopup(popup);
+      }
+    }
   </script>
 
   <script>
