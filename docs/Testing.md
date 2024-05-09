@@ -25,19 +25,19 @@ The RTM links requirements to code via testing.
 
 | Use-Case ID | Requirement ID | Software module | Test case ID | Status |
 |--------------------------------------|---------------------|---------------------|---------------------|---------------------|
-| UC1a | FR1.1 | mapcp.htm |  |
-| UC1a | F1.1.2 | tablecp.htm |  |
-| UC1a | F1.1.4 | tablecp.htm |  |
-| UC1a | F1.7 | Review.htm |  |
-| UC1b | F1.2.1 | tablecp.htm |  |
-| UC1b | F2.1 | data usage.htm |  |
-| UC3 | F3.6 | mapcp.htm |  |
-| UC1 | NF1 |  mapcp.htm|  |
-| UC1 | NF2 | tablecp.htm |  |
-| UC1 | NF4 | ALL |  |
-| UC1 | NF5 | ALL |  |
-| UC1 | NF8a | mapcp.htm |  |
-| UC1 | NF8b | tablecp.htm |  |
+| UC1a | FR1.1 | mapcp.htm | TF1.1.1 | pass |
+| UC1a | F1.1.2 | tablecp.htm | TF1.1.2 | fail (data last updated 09/05/24) |
+| UC1a | F1.1.4 | tablecp.htm | TF1.1.4 | fail (data last updated 09/05/24) |
+| UC1a | F1.7 | Review.htm | TF1.1.7 | fail (data last updated 09/05/24) |
+| UC1b | F1.2.1 | tablecp.htm | TF1.2.1 | pass |
+| UC1b | F2.1 | data usage.htm | TF2.1 | pass |
+| UC3 | F3.6 | mapcp.htm | TF3.6 | pass |
+| UC1 | NF1 |  mapcp.htm| TNF1 | fail (data last updated 09/05/24) |
+| UC1 | NF2 | tablecp.htm | TNF2 | pass |
+| UC1 | NF4 | ALL | TNF4 | pass |
+| UC1 | NF5 | ALL | TNF5 | pass |
+| UC1 | NF8a | mapcp.htm | TNF8a | pass |
+| UC1 | NF8b | tablecp.htm | TNF8b | pass |
 
 
 
