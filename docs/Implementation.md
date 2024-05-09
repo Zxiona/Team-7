@@ -74,9 +74,11 @@ huh???
 
 ## Software Architecture
 
-This Diagram shows how the app communicates with two different services, in this case it would be the OpenData database and the mapbox API .
+### This Diagram shows how the app communicates with two different services, in this case it would be the OpenData database and the mapbox API .
 
 ![Insert your Interaction/Component Diagrams for each use-case here.](diagrams/ComponentDiagram.png)
+
+### The output of a simple JSON query is depicted in this diagram, which can be documented as follows.
 
 ![Insert your Interaction/Class Diagrams for each use-case here.](diagrams/ClassDiagram.png)
 
