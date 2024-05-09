@@ -26,12 +26,12 @@ The RTM links requirements to code via testing.
 | Use-Case ID | Requirement ID | Software module | Test case ID | Status |
 |--------------------------------------|---------------------|---------------------|---------------------|---------------------|
 | UC1a | FR1.1 |  |  |
-| UC1a |  |  |  |
-| UC1a |  |  |  |
-| UC1b |  |  |  |
-| UC1a |  |  |  |
-| UC1a |  |  |  |
-| UC2 |  |  |  |
+| UC1a | F1.1.2 |  |  |
+| UC1a | F1.1.4 |  |  |
+| UC1b | F1.7 |  |  |
+| UC1a | F1.2.1 |  |  |
+| UC1a | F2.1 |  |  |
+| UC2 | F3.6 |  |  |
 | UC3 |  |  |  |
 | UC1a |  |  |  |
 | UC1a |  |  |  |
