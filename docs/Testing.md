@@ -4,13 +4,13 @@
 
 | Test case ID | Test Type | Description | Scenario |
 |--------------------------------------|---------------------|---------------------|---------------------|
-| **Description** |  Find parking spots that are close and/or reserve a parking spot in advance |
-| **Actors** | Car Owners |  |  |
-| **Assumptions** | Car owners must have location services turned on and follow the rules stated by the app for example reporting parking in a space. |  |  |
-| **Steps** | Using Bristol opendata create a database with all of the data related to the parking spots. Car owners should then check around them for parking spots. Car owners are then able to see the parking spots and all the details they entail. |  |  |
-| **Variations** | Car owners may want to look up parking spots pre-trip so that they are able to plan the most efficient route for them. |  |  |
-| **Non-functional** | Data must be protected and secure. Should be able to access data from server in real time. Needs to be able to run on any devices within reason. Must have a user-friendly interface that is easy to understand. Must abide by Data Protection Act and UK Gov. |  |  |
-| **Issues** | There could be issues with the real-time data being updated onto the app when car parking spaces are being occupied. |  |  |
+| **TF1.1.1** | UAT | request location permission from user then query geolocation from mapbox  | 1. User clicks Location arrow/n 2. Confirmation box appears, requesting permission./n 3. gets shows location on map  |
+| **TF1.1.2** | UAT |  |  |
+| **TF1.1.4** | UAT |  |  |
+| **TF1.7** | UAT |  |  |
+| **TF1.2.1** | UAT |  |  |
+| **TF2.1** | UAT |  |  |
+| **TF3.6** | UAT |  |  |
 
 
 
