@@ -114,7 +114,7 @@ FR5: The system won't be able to show data regarding models of cars frequanted o
 
 NFR1: The system shall show up to 6 different parking spots near the user.
 
-NFR2: The system shall parking spots up to 1 mile from the user.
+NFR2: The system shall parking spots up to 1km from the user.
 
 NFR3: The system should have a graphical user interface that has the map as the main focus, this allows for the user to have a better experience.
 
