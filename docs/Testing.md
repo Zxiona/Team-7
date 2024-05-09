@@ -4,13 +4,18 @@
 
 | Test case ID | Test Type | Description | Scenario |
 |--------------------------------------|---------------------|---------------------|---------------------|
-| **TF1.1.1** | UAT | request location permission from user then query geolocation from mapbox  | 1. User clicks Location arrow <br> 2. Confirmation box appears, requesting permission <br> 3. gets shows location on map  |
-| **TF1.1.2** | UAT |  |  |
-| **TF1.1.4** | UAT |  |  |
-| **TF1.7** | UAT |  |  |
-| **TF1.2.1** | UAT |  |  |
-| **TF2.1** | UAT |  |  |
-| **TF3.6** | UAT |  |  |
+| **TF1.1.1** | UAT | Request location permission from user then query geolocation from mapbox  | 1. User clicks Location arrow <br> 2. Confirmation box appears, requesting permission <br> 3. Shows location on map  |
+| **TF1.1.2** | UAT | Shows markers of closest parking spots on table | 1. User clicks location arrow <br> 2. Confirmation box appears, requesting permission <br> 3. Shows closest parking spots within 1km in table  |
+| **TF1.1.4** | UAT | Filter results by filter icon | 1. User clicks filter icon <br> 2. User selects filter from dropdown menu <br> 3. Shows filtered parking spots in table |
+| **TF1.7** | UAT | Submit form with a review page | 1. Once user signs in review page pops up <br> 2. User inputs a review <br> 3. Submit button sends information to text file  |
+| **TF1.2.1** | UAT | Shows searched data when data is inputted into search bar | 1. User clicks search icon <br> 2. User inputs data <br> 3. Shows searched parking spots in table |
+| **TF2.1** | UAT | Shows relevent data on data dashboard page | 1. User navigates to dashboard using nav menu 2. Table and map appears showing relevent data |
+| **TF3.6** | UAT | Map centers on user location | 1. User clicks Location arrow <br> 2. Confirmation box appears, requesting permission <br> 3. Centers map to user location |
+| **TNF1** | UAT |  |  |
+| **TNF2** | UAT |  |  |
+| **TNF4** | UAT |  |  |
+| **TNF5** | UAT |  |  |
+| **TNF8** | UAT |  |  |
 
 
 
