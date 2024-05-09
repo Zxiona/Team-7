@@ -19,7 +19,7 @@ Using Bristol opendata create a database with all of the data related to the par
 
 1. Once on the app click on the menu icon in the top right
 
-![image](https://github.com/Zxiona/Team-7/assets/82226228/e28c799a-dab2-4f91-b9ca-9fd8d1a8002e)
+![image](https://github.com/Zxiona/Team-7/assets/82226228/f0abe4bd-70b8-4a37-b201-083803ec5e6b)
 
 
 ## Deployment Diagram
